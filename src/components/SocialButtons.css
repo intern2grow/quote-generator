@@ -1,0 +1,39 @@
+
+  .social-btns {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    margin-top: 10px; 
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 50%;
+  }
+  
+.whatsappIcon{
+    background-color: #25d366; 
+    color: white;
+    border: solid 1px #25d366 ;
+    border-radius: 40%;
+    padding: 8px;
+    margin-right: 5px;
+    
+}
+
+.twitterIcon{
+    background-color: #1da1f2; 
+    color: white;
+    border: solid 1px #1da1f2 ;
+    border-radius: 40%;
+    padding: 8px;
+    margin-right: 5px;
+    
+}
