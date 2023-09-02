@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
-
+import { TwitterShareButton, TwitterIcon } from 'react-share';
+import { WhatsappShareButton, WhatsappIcon } from 'react-share';
 const App = () => {
   const url = "https://api.quotable.io/random";
   let quoteData = {
@@ -34,6 +35,21 @@ const App = () => {
           <button onClick={generateQuote}>Generate Another Quote</button>
         </div>
       </div>
+   <br></br>
+      <WhatsappShareButton
+        url={'https://www.example.com'}
+        quote={'Dummy text!'}
+        hashtag="#muo"
+      >
+        <WhatsappIcon size={32} round />
+      </WhatsappShareButton>
+      <TwitterShareButton
+  url={'https://www.example.com'}
+  quote={'Dummy text!'}
+  hashtag="#muo"
+>
+  <TwitterIcon size={32} round />
+</TwitterShareButton>
     </>
   )
 }
