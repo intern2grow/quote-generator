@@ -1,5 +1,8 @@
 import './App.css';
 import React, {useState} from 'react';
+import { FacebookShareButton , FacebookIcon } from 'react-share';
+import { WhatsappShareButton ,WhatsappIcon } from 'react-share';
+import {TwitterShareButton , TwitterIcon} from 'react-share';
 
 const App = () => {
   const url = "https://api.quotable.io/random";
@@ -33,10 +36,21 @@ const App = () => {
           <button onClick={copy} className="btn">Copy</button>
           <button onClick={generateQuote}>Generate Another Quote</button>
         </div>
+        <div className='size'>
+        <FacebookShareButton url={url}>
+            <FacebookIcon size={40} />
+        </FacebookShareButton>
+
+        <WhatsappShareButton url={url}>
+             <WhatsappIcon size={40} />
+        </WhatsappShareButton>
+
+        <TwitterShareButton url={url}>
+            <TwitterIcon size={40} />
+        </TwitterShareButton>
+        </div>
       </div>
     </>
   )
 }
-
-
 export default App;
