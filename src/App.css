@@ -26,11 +26,11 @@ h1{
     background-color: #080808;
     padding: 10px 5px 5px 5px;
     box-sizing: border-box;
-    border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    border-radius: 4px;
 }
 .container p{
     color: #e3e3e3;
@@ -59,11 +59,11 @@ h1{
     color: #e3e3e3;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    border-radius: 4px;
     font-weight: 500;
 }
 .btns button.btn{
@@ -78,4 +78,10 @@ h1{
 .btns button:last-of-type{
     grid-column: 2/4;
     grid-row: 1;
+}
+.text-end{
+    text-align: end;
+}
+.text-end button{
+    margin: 5px;
 }
