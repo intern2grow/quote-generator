@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import apiQuote from "./utils/api-quote";
 import copyQuote from "./utils/copy-quote";
+import ShareViaSocial from "./ShareViaSocial";
 
 const App = () => {
   const [quote, setQuote] = useState({
@@ -23,6 +24,7 @@ const App = () => {
             Generate Another Quote
           </button>
         </div>
+        <ShareViaSocial quote={quote} />
       </div>
     </>
   );
