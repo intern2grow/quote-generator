@@ -1,0 +1,13 @@
+# node modules
+node_modules/
+
+# build directory
+build/
+
+# local env files
+.env.local
+
+#  config files
+*.config.js
+config/
+

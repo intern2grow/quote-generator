@@ -1,27 +1,14 @@
-import './App.css';
-import React, {useState} from 'react';
+import "./App.css";
+import React, { useState } from "react";
+import apiQuote from "./utils/api-quote";
+import copyQuote from "./utils/copy-quote";
+import ShareViaSocial from "./ShareViaSocial";
 
 const App = () => {
-  const url = "https://api.quotable.io/random";
-  let quoteData = {
+  const [quote, setQuote] = useState({
     content: "Let time be your only competitor.",
-    author: "Ahmed Saber"
-  }
-  const [quote, setQuote] = useState(quoteData)
-
-  const generateQuote = () => {
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setQuote(data)
-      });
-  }
-
-  const copy = () => {
-    navigator.clipboard.writeText(quote.author + " once said: " + quote.content)
-    alert('copied')
-  }
+    author: "Ahmed Saber",
+  });
 
   return (
     <>
@@ -30,13 +17,17 @@ const App = () => {
         <p>{quote.content}</p>
         <span>{quote.author}</span>
         <div className="btns">
-          <button onClick={copy} className="btn">Copy</button>
-          <button onClick={generateQuote}>Generate Another Quote</button>
+          <button onClick={() => copyQuote(quote)} className="btn">
+            Copy
+          </button>
+          <button onClick={async () => setQuote(await apiQuote())}>
+            Generate Another Quote
+          </button>
         </div>
+        <ShareViaSocial quote={quote} />
       </div>
     </>
-  )
-}
-
+  );
+};
 
 export default App;
