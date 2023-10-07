@@ -21,16 +21,16 @@ h1 {
 }
 .container {
   width: 96%;
-  max-width: 400px;
+  max-width: 415px;
   margin: 0 auto;
   background-color: #080808;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 7px 5px 7px;
   box-sizing: border-box;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .container p {
   color: #e3e3e3;
