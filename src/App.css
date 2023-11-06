@@ -79,3 +79,8 @@ h1{
     grid-column: 2/4;
     grid-row: 1;
 }
+.share-buttons{
+    margin: .75rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
