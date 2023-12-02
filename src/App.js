@@ -36,7 +36,31 @@ const App = () => {
       </div>
     </>
   )
-}
 
+
+  const Quote = ({ quote, author }) => {
+    const shareOnWhatsApp = () => {
+      const text = encodeURIComponent(`"${quote}" - ${author}`);
+      window.open(`https://api.whatsapp.com/send?text=${text}`);
+    };
+  
+    const shareOnTwitter = () => {
+      const text = encodeURIComponent(`"${quote}" - ${author}`);
+      window.open(`https://twitter.com/intent/tweet?text=${text}`);
+    };
+  
+    return (
+      <div className="quote-container">
+        <p className="quote">{quote}</p>
+        <p className="author">- {author}</p>
+        <div className="social-buttons">
+          <a href="#" onClick={shareOnWhatsApp}>Share on WhatsApp</a>
+          <a href="#" onClick={shareOnTwitter}>Share on Twitter</a>
+         
+        </div>
+      </div>
+    );
+  };
+    }
 
 export default App;
