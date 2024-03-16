@@ -48,9 +48,27 @@ const App = () => {
                          </button>
                     </div>
                     <div className={`share-sec ${isOpen ? "" : "hidden"} `}>
-                         <p>WhatsApp</p>
-                         <p>Instagram</p>
-                         <p>Facebook</p>
+                         <a
+                              rel="noreferrer"
+                              target="_blank"
+                              href={`https://twitter.com/intent/tweet?text=${quote.content}`}
+                         >
+                              Twitter
+                         </a>
+                         <a
+                              rel="noreferrer"
+                              target="_blank"
+                              href={`https://t.me/share/url?url=d.com&text=${quote.content}`}
+                         >
+                              Telegram
+                         </a>
+                         <a
+                              rel="noreferrer"
+                              target="_blank"
+                              href={`https://www.reddit.com/submit?text=${quote.content}&title=quote`}
+                         >
+                              reddit
+                         </a>
                     </div>
                </div>
           </>
